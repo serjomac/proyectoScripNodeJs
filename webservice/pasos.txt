@@ -1,0 +1,30 @@
+--PREPARAR ENTORNO Y DEPENDENCIAS
+
+1.Instalar nodejs
+2.Instalar npm
+3.Instalar mysql
+4.mkdir demo
+5.cd demo
+6. npm install express --save
+
+//En caso de tener un problema con el proxy
+//npm config set proxy http://david.espol.edu.ec:8080
+
+7. npm install mysql --save
+8. npm install cors --save (As we know CORS(cross -origin resourece sharing)  is most important while creating api.above code will install dependecy of cors in to package.json file).
+9. npm install (Esto genera el package.json)
+
+--BASE DE DATOS MYSQL
+
+mysql -u root -p < diagrama.sql
+
+Crear api usando nodeJS (archivo dbconnection.js)
+
+Crear modelo Task (Task.js)
+
+Configurar las rutas (GET, PUT, POST, DELETE) - Task.js
+
+
+https://jinalshahblog.wordpress.com/2016/10/06/rest-api-using-node-js-and-mysql/
+
+Postman, ARC para probar las peticiones

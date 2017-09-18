@@ -1,0 +1,33 @@
+{{#each test}}
+ <form name="form" method="post" action="/updateUser/{{this.id}}">
+  
+            <table width="393" border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#999999">
+             <tr>
+                  <td colspan="2" align="center" bgcolor="#0066CC">
+                  <span class="">Actualizar usuario</span> </td>
+             </tr>
+             
+             <tr>
+                 <td width="110" bgcolor="#D7D7FF"><strong>Nombre</strong></td>
+                 <td> <input name="nombre" type="text" id="nombres" placeholder="Nombre" value="{{this.nombre}}" />  </td>
+             </tr>
+             
+             <tr>
+                 <td bgcolor="#D7D7FF"><strong>Nombre de Usuario</strong></td>
+                 <td bgcolor="#FFFFFF"><input name="nombreUsuario" placeholder="nombre de usuario" type="text" value="{{this.nombreUsuario}}" /></td>
+             </tr>
+<tr>
+      <td bgcolor="#D7D7FF"><strong>Contrasena</strong></td>
+      <td bgcolor="#FFFFFF"><input name="password" placeholder="Clave" type="text" value="{{this.password}}" /></td>
+    </tr>
+      
+       <tr>
+       <td>
+        <button type="submit" id="addUser">Actualizar</button>
+        </td>
+        </tr>
+    </table>
+</form>
+
+
+{{/each}}

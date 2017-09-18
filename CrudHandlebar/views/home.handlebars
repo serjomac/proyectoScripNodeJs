@@ -1,0 +1,68 @@
+<form name="form" method="post" action="addUser">
+  
+            <table width="393" border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#999999">
+             <tr>
+                  <td colspan="2" align="center" bgcolor="#0066CC">
+                  <span class="Estilo1">Registrarse</span> </td>
+             </tr>
+             <tr>
+                 <td width="110" bgcolor="#D7D7FF"><strong>Id</strong></td>
+                 <td> <input name="id" type="text" id="nombres" placeholder="Id" />  </td>
+             </tr>
+             <tr>
+                 <td width="110" bgcolor="#D7D7FF"><strong>Nombre</strong></td>
+                 <td> <input name="nombre" type="text" id="nombres" placeholder="Nombre" />  </td>
+             </tr>
+             
+             <tr>
+                 <td bgcolor="#D7D7FF"><strong>Nombre de Usuario</strong></td>
+                 <td bgcolor="#FFFFFF"><input name="nombreUsuario" placeholder="nombre de usuario" type="text" /></td>
+             </tr>
+<tr>
+      <td bgcolor="#D7D7FF"><strong>Contrasena</strong></td>
+      <td bgcolor="#FFFFFF"><input name="password" placeholder="Clave" type="text" /></td>
+    </tr>
+      
+       <tr>
+       <td>
+        <button type="submit" id="addUser"> Agregar Usuario</button>
+        </td>
+        </tr>
+    </table>
+</form>
+
+
+<h1>Lista</h1>
+<table class="people_list">
+<thead>
+<th>||..Id</th>
+<th>||..Nombre</th>
+<th>||..Nombre de usuario</th>
+<th>||..Contrasena</th>
+<th>||..Accion</th>
+</thead>
+
+<tbody>
+    
+    <tr>
+        {{#each test}}
+        <td> {{this.id}} </td>
+        <td> {{this.nombre}} </td>
+        <td> {{this.nombreUsuario}} </td>
+        <td> {{this.password}} </td>
+        <td> <a href="/edit/{{this.id}}" name="editar" type="button" id="editar" value="editar" >Editar</a> 
+            <a href="/deleteUser/{{this.id}}" name="borrar" type="button" id="borrar" value="borrar" >Borrar</a>   
+        </td>
+        
+        <td></td>
+        
+    </tr>
+    
+    
+</tbody>
+
+
+  {{/each}}
+
+
+</table>
